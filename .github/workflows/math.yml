@@ -4,7 +4,7 @@ name: math-push
 on:
   # вызывает workflow на пуше или пуле только для главной ветки
   push:
-    branches: [ master ]
+    branches: [ main ]
 
   workflow_dispatch:
 
