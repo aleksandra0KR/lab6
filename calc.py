@@ -4,13 +4,13 @@ def calc(operation):
    b = int(operation[2])
    ans = "wrong"
    operator = operation[1]
-   if operator == '+':
+   if (operator == '+'):
        ans = a+b
-   elif operator == '-':
+   elif (operator == '-'):
        ans = a-b
-   elif operator == '/':
+   elif (operator == '/'):
        ans = a/b
-   elif operator == '*':
+   elif (operator == '*'):
        ans = a*b
 
    return ans
