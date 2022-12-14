@@ -1,5 +1,4 @@
 import calc
-class Tests:
 
     def test_plus(self):
         output = calc.calc("3 + 4")
