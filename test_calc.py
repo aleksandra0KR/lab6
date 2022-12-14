@@ -13,7 +13,7 @@ def test_plus2():
 
 def test_plus3():
     output = calc.calc("3 * 4")
-    assert output == 12
+    assert output == 120
     
 test_plus1()
 test_plus2()
