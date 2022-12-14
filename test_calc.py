@@ -1,15 +1,5 @@
 import calc
-def test_answer():
-    assert calculate(3) == 5
-
-def test_answer():
-    assert calculate(3,4,'+') == 7
-
-def test_answer():
-    assert calculate(3,4,'-') == -1
-
-def test_answer():
-    assert calculate(3,4,'*') == 16
-
-def test_answer():
-    assert calculate(3,3,'/') == 1
+assert calc.simple_calculator(2,2,'+') == 4
+assert calc.simple_calculator(2,2,'-') == 0
+assert calc.simple_calculator(2,2,'/') == 1
+assert calc.simple_calculator(2,2,'*') == 4
