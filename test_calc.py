@@ -9,7 +9,7 @@ def test_answer():
     assert calculate(3,4,'-') == -1
 
 def test_answer():
-    assert calculate(3,4,'*') == 19
+    assert calculate(3,4,'*') == 16
 
 def test_answer():
     assert calculate(3,3,'/') == 1
