@@ -44,7 +44,7 @@ jobs:
       - name: Commit files
         run: |
             git add calc.pyc
-            git add cd/calc
-            git add builded/calc/calc.pkg
-            git commit -a -m 'Зushed by GitHub Actions'
+            git add dist/calc
+            git add build/calc/calc.pkg
+            git commit -a -m 'Pushed by GitHub Actions'
             git push origin main
