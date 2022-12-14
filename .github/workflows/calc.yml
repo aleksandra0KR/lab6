@@ -1,47 +1,46 @@
-# This is a basic workflow to help you get started with Actions
-
 name: calc-push
 
-# Controls when the workflow will run
+# контролирует, когда начнется выполнение
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # вызывает workflow на пуше или пуле только для главной ветки
   push:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+jobs: 
+# прогон тестов
   test:
     runs-on: ubuntu-latest
     steps:
+    # проверка на наличие
       - name: Check out repository code
         uses: actions/checkout@v2
         
       - name: Check out calc tests
         run: python test_calc.py
       
-  # This workflow contains a single job called "build"
+  # построение
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # проверка на наличие
       - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
+      # переводим в байтовый код
       - name: compile to bytecode
         run: python -m py_compile calc.py > calc.pyc
+      # устанавливаем pyinstaller
       - name: setup compiler
         run: pip install pyinstaller
+        # компилирование
       - name: compile to package
         run: pyinstaller calc.py  --noconfirm --onefile --console
+        # устанавливаем имена
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>" 
-      # commit files
+      # добавляем в отслеживание файлы и пушим их
       - name: Commit files
         run: |
             git add calc.pyc
