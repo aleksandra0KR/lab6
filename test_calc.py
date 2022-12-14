@@ -1,14 +1,11 @@
 import calc
 
-    def test_plus(self):
-        output = calc.calc("3 + 4")
-        assert output == 7
-        
-    def test_plus(self):
-        output = calc.calc("3 - 4")
-        assert output == -1
-        
-    def test_plus(self):
-        output = calc.calc("3 * 4")
-        assert output == 12
+def test_answer():
+    assert calculate("3 + 4") == 7
+
+def test_answer():
+    assert calculate("3 - 4") == -1
+
+def test_answer():
+    assert calculate("3 * 4") == 12
 
