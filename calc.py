@@ -1,7 +1,7 @@
 def calc(operation):
    operation = list(operation.split())
    a = int(operation[0])
-   b = int(operation[1])
+   b = int(operation[2])
    ans = "wrong"
    if operation == '+':
        ans = a+b
