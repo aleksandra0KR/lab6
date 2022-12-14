@@ -1,4 +1,4 @@
-name: calc-push
+name: math-push
 
 # контролирует, когда начнется выполнение
 on:
@@ -46,5 +46,5 @@ jobs:
             git add calc.pyc
             git add dist/calc
             git add build/calc/calc.pkg
-            git commit -a -m 'Pushed by GitHub Actions'
+            git commit -a -m 'Pushed by GitHub Actions' || true
             git push origin main
