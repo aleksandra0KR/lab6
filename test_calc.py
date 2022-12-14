@@ -2,7 +2,7 @@ import calc
 
     def test_plus(self):
         output = calc.calc("3 + 4")
-        assert output == 12
+        assert output == 7
         
     def test_plus(self):
         output = calc.calc("3 - 4")
@@ -10,5 +10,5 @@ import calc
         
     def test_plus(self):
         output = calc.calc("3 * 4")
-        assert output == 16
+        assert output == 12
 
