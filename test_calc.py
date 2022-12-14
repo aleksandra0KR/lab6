@@ -1,13 +1,15 @@
 import calc
+class Tests:
 
-def test_answer():
-    assert calculate(3,4,'+') == 7
+    def test_plus(self):
+        output = calc.calc("3 + 4")
+        assert output == 12
+        
+    def test_plus(self):
+        output = calc.calc("3 - 4")
+        assert output == -1
+        
+    def test_plus(self):
+        output = calc.calc("3 * 4")
+        assert output == 16
 
-def test_answer():
-    assert calculate(3,4,'-') == -1
-
-def test_answer():
-    assert calculate(3,4,'*') == 16
-
-def test_answer():
-    assert calculate(3,3,'/') == 1
