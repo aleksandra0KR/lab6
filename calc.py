@@ -1,14 +1,19 @@
-def calculate(a, b, operation):
-   result = None
+def calc(operation):
+   operation = list(operation.split())
+   a = int(operation[0])
+   b = int(operation[1])
+   ans = "wrong"
    if operation == '+':
-       result = a+b
+       ans = a+b
    elif operation == '-':
-       result = a-b
+       ans = a-b
    elif operation == '/':
-       result = a/b
+       ans = a/b
    elif operation == '*':
-       result = a*b
-   else:
-       print('Неизвестная операция')
+       ans = a*b
 
    return result
+
+if __name__ == "__main__":
+   operation = input()
+   print(calc(operation))
