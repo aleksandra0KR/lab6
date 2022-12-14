@@ -12,7 +12,7 @@ def calc(operation):
    elif operation == '*':
        ans = a*b
 
-   return result
+   return ans
 
 if __name__ == "__main__":
    operation = input()
