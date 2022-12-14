@@ -3,13 +3,14 @@ def calc(operation):
    a = int(operation[0])
    b = int(operation[2])
    ans = "wrong"
-   if operation == '+':
+   operator = operation[1]
+   if operator == '+':
        ans = a+b
-   elif operation == '-':
+   elif operator == '-':
        ans = a-b
-   elif operation == '/':
+   elif operator == '/':
        ans = a/b
-   elif operation == '*':
+   elif operator == '*':
        ans = a*b
 
    return ans
